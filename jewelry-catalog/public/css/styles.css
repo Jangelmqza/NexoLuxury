@@ -343,3 +343,14 @@ header {
   box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
 }
 
+.social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px; /* Espacio entre el logo y el texto */
+    color: inherit; /* Usa el color que ya tengas definido */
+}
+
+.social-links i {
+    font-size: 1.2rem; /* Tamaño del logo */
+}
