@@ -100,6 +100,7 @@ nav {
 }
 
 /* HERO SECTION */
+.page-hero,
 #hero {
   height: 90vh;
   display: flex;
@@ -114,6 +115,10 @@ nav {
   background-position: center;
   background-attachment: fixed;
   padding-top: var(--header-height);
+}
+
+.page-hero {
+  height: 55vh;
 }
 
 .hero-content h1 {

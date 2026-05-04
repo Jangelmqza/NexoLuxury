@@ -1,27 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Filtro de Categorías
-    const filterButtons = document.querySelectorAll('.category');
-    const productCards = document.querySelectorAll('.product-card');
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const productCards = document.querySelectorAll('#catalog .product-card');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const filter = button.getAttribute('data-filter');
+    if (filterButtons.length && productCards.length) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
 
-            productCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'flex';
-                    // Pequeña animación de re-entrada
-                    card.style.animation = 'fadeIn 0.5s ease forwards';
-                } else {
-                    card.style.display = 'none';
-                }
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                        // Pequeña animación de re-entrada
+                        card.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Feedback visual en botones (opcional)
+                filterButtons.forEach(btn => btn.style.borderColor = 'var(--border-color)');
+                button.style.borderColor = 'var(--accent-gold)';
             });
-
-            // Feedback visual en botones (opcional)
-            filterButtons.forEach(btn => btn.style.borderColor = 'var(--border-color)');
-            button.style.borderColor = 'var(--accent-gold)';
         });
-    });
+    }
 
     // 2. Header Sticky / Opacidad al Scroll
     const header = document.querySelector('header');
