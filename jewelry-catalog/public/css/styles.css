@@ -30,7 +30,11 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, .logo {
+h1, h2, h3, .category, .product-name {
+  font-family: 'Playfair Display', serif;
+}
+
+.logo-name {
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -64,6 +68,17 @@ nav {
   color: var(--accent-gold);
 }
 
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-name {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -74,6 +89,9 @@ nav {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   transition: color 0.3s ease;
 }
 
@@ -107,6 +125,7 @@ nav {
 }
 
 .hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   color: var(--accent-gold);
   letter-spacing: 3px;
@@ -120,6 +139,7 @@ nav {
   background-color: var(--accent-gold);
   color: var(--bg-primary);
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -161,7 +181,6 @@ h2 {
   background-color: var(--bg-card);
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
 }
 
@@ -237,6 +256,14 @@ h2 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
+}
+
+.product-material,
+.product-price,
+.footer-content p,
+.social-links a,
+.btn-whatsapp {
+  font-family: 'Lato', sans-serif;
 }
 
 .product-material {
