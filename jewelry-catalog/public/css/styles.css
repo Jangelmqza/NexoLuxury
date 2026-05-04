@@ -203,6 +203,17 @@ h2 {
   gap: 2rem;
 }
 
+#contact-info .product-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
+  justify-content: center;
+}
+
+#contact-info .product-card {
+  width: 100%;
+}
+
 /* PRODUCT CARD */
 .product-card {
   background-color: var(--bg-card);
